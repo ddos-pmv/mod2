@@ -18,6 +18,7 @@ window.addEventListener('click', (event) => {
     }
 })
 const way = document.referrer;
+console.log(way);
 if (way == "http://xbcdyna-m4.wsr.ru/mod2.v2/admin/") {
     modal.style.display = "flex";
     delete way
