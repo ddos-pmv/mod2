@@ -19,7 +19,7 @@ window.addEventListener('click', (event) => {
 })
 const way = document.referrer;
 console.log(way);
-if (way == "http://xbcdyna-m4.wsr.ru/mod2.v2/admin/") {
+if (way == "file:///C:/Users/%D0%9F%D0%B5%D1%80%D0%BB%D0%B8%D0%BD%20%D0%A1%D0%B5%D1%80%D0%B3%D0%B5%D0%B9/Documents/git/mod2/admin/") {
     modal.style.display = "flex";
     delete way
     console.log(document.referrer);
