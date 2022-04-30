@@ -18,7 +18,7 @@ window.addEventListener('click', (event) => {
     }
 })
 const way = document.referrer;
-if (way == "http://xbcdyna-m4.wsr.ru/mod2.v2/admin/") {
+if (way == way+"admin/") {
     modal.style.display = "flex";
     delete way
     console.log(document.referrer);
@@ -42,6 +42,4 @@ let fesponse = (f) => fetch('php/main.php', {
         method: 'POST',
         body: f
     })
-    .then(resp => JSON.stringify(resp))
-    .then(resp => JSON.parse(resp))
-    .then(resp => typeof(resp))
+    .then(resp => resp.text())
