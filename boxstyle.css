@@ -1,0 +1,65 @@
+*,
+*::before,
+*::after {
+    box-sizing: box-box;
+}
+
+.news {
+    padding: 5px;
+    width: 40%;
+    min-width: 720px;
+    height: auto;
+    display: grid;
+    grid-template-areas: "header header" "img text";
+    grid-template-columns: 1fr 1fr;
+}
+
+.box-header {
+    grid-area: header;
+    margin-bottom: 15px;
+}
+
+.left-side-img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    grid-area: img;
+    margin: 0;
+    vertical-align: middle;
+    padding: 0 5px 0 5px;
+}
+
+.right-side {
+    grid-area: text;
+    font-size: 0.82em;
+}
+
+.right-side,
+.box-header {
+    margin-top: 10px;
+    margin-bottom: 0;
+    padding: 0 5px 0 5px;
+}
+
+@media screen and (max-width:780px) {
+    .section-news {
+        width: 100%;
+    }
+    .news-wrapper {
+        width: 100%;
+        margin: auto;
+    }
+    .news {
+        grid-template-rows: auto auto auto;
+        grid-template-columns: 1fr;
+        grid-template-areas: "header" "img" "text";
+        min-width: 300px;
+    }
+    .right-side div {
+        display: none;
+    }
+}
+
+@media screen and (max-width:1127px) {
+    .news {}
+}
